@@ -1,0 +1,20 @@
+/*
+Theme Name: Test Them
+Text Domain: test-them
+Version: 1.0
+Author: the SkillUp team
+
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+body {
+    background: #F2F1EC;
+    max-width: 700px;
+    margin: 2em auto;
+}
+
+.header, .footer {
+    margin: 2em auto;
+    text-align: center;
+}
