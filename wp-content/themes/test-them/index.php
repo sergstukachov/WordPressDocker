@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html>
+<?php get_header(); ?>
+	<div class="content-main">
+		<div class="content">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<head>
-    <meta charset="<?php bloginfo( 'test_cars' ); ?>">
-    <title>
-        <?php echo wp_get_document_title(); ?>
-    </title>
+					<div><?php the_content();?></div>
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-
-    <?php wp_head(); ?>
-</head>
-
-<body>
-<header class="header">
-    <h1><?php bloginfo( 'name' ); ?></h1>
-    <h2><?php echo __('Cars Home Page'); ?></h2>
-</header>
-
-<div class="middle">
-///////////////////////////
-    <?php     echo '<h3><a href="'. site_url( $path = '', $scheme = null ).'/?post_type=test_cars ">'.'All Cars'.'</a></h3>'; ?>
-</div>
-
+				</div>
+			<?php endwhile; ?>
+			<?php else: ?>
+			<?php endif; ?>
+		</div>
+	</div>
 <?php get_footer(); ?>
-</body>
-
-</html>

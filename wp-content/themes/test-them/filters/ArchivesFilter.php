@@ -13,13 +13,9 @@ add_action( 'wp_ajax_myfilter', 'true_filter_function' );
 add_action( 'wp_ajax_nopriv_myfilter', 'true_filter_function' );
 
     function true_filter_function(){
-        $args = array(
-            'orderby' => 'date',
-            'order'	=> $_POST[ 'date' ]
-        );
-
+        $args['post_type'] = 'test_cars';
         // for the taxonomy
-        if( isset( $_POST[ 'categoryfilter' ] )) {
+        if( $_POST[ 'categoryfilter' ]) {
             $args[ 'tax_query' ] = array(
                 array(
                     'taxonomy' => 'cars_category',
@@ -28,8 +24,19 @@ add_action( 'wp_ajax_nopriv_myfilter', 'true_filter_function' );
                 )
             );
         }
+       if( $_POST[ 'brand' ] ) {
+           $args['meta_query'] = [
 
+            'relation' => 'AND', [
+                    'key' => 'brand2',
+                    'value' => sanitize_text_field($_POST['brand']),
+                    'compare' => '='
+                ]];}
         query_posts( $args );
+//       var_dump($_POST);
+//       var_dump($_POST['brand']);
+//
+//        var_dump( $GLOBALS['wp_query']->request);die();// Print SQL Query
         if ( have_posts() ) {
             echo '<header class="header"><ul>';
             while ( have_posts() ) : the_post();

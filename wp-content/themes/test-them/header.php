@@ -1,27 +1,11 @@
-<?php
-/**
- * Header file for the Test Them WordPress custom theme.
- *
- * @package WordPress
- * @subpackage Test_Them
- * @since Test Them 1.0
- */
-
-?><!DOCTYPE html>
-
-<html >
-
-<head>
-    <link href="/wp-content/themes/test-them/assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/wp-content/themes/test-them/assets/js/bootstrap.min.js"></script>
-    <?php wp_head(); ?>
-
-</head>
-
-<body >
-
-<header >
-
-</header>
-
-
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cars</title>
+        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+<!--        <link href="/wp-content/themes/test-them/assets/css/bootstrap.min.css" rel="stylesheet">-->
+<!--        <script src="/wp-content/themes/test-them/assets/js/bootstrap.min.js"></script>-->
+	    <?php wp_head(); ?>
+    </head>
+    <body>
