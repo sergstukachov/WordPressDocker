@@ -33,8 +33,7 @@ add_action( 'wp_ajax_nopriv_myfilter', 'true_filter_function' );
                     'compare' => '='
                 ]];}
         query_posts( $args );
-//       var_dump($_POST);
-//       var_dump($_POST['brand']);
+
 //
 //        var_dump( $GLOBALS['wp_query']->request);die();// Print SQL Query
         if ( have_posts() ) {

@@ -18,4 +18,4 @@ require get_template_directory() . '/filters/ArchivesFilter.php';
 require get_template_directory() . '/taxonomy/CarsTaxonomy.php';
 require get_template_directory() . '/cpt/CarsCPT.php';
 require get_template_directory() . '/template-parts/blocks/RegistrationBlocks.php';
-
+require get_template_directory() . '/likes_dislikes/LikesDislikes.php';

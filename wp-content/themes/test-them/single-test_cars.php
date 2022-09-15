@@ -11,6 +11,8 @@ get_header(); ?>
                 <h2 class="post-title"><?php the_title(); ?></h2>
                 <div><?php the_content();?></div>
                 <div id="do_shortcode"><?php echo do_shortcode( '[gallery]' );?></div>
+                <?php //var_dump(get_the_ID()); die(); ?>
+	            <?php echo getPostLikeLink(get_the_ID()); ?>
             </div>
     </div>
 
@@ -26,41 +28,6 @@ if( $fields ): ?>
 	<?php endif; ?>
 </div>
 </div>
-<!--    Create block Aboutus-->
-<?php
-//$className = 'aboutus';
-//if( !empty($fields['className']) ) {
-//	$className .= ' ' . $fields['className'];
-//}
-//if( !empty($fields['align']) ) {
-//	$className .= ' align' . $fields['align'];
-//}
-//
-//    $text = get_field('aboutus') ?: 'We work for you!';
-//    $author = get_field('author') ?: 'made in Ukrain/';
-//    $role = get_field('role') ?: "If you can see it, it's ok";
-//    $image = get_field('image') ?: 'Bolt';
-//    $background_color = get_field('background_color');
-//    $text_color = get_field('text_color')
-//    ?>
-<!--    <div id="aboutus" class="aboutus">-->
-<!---->
-<!--        <blockquote class="--><?php //echo $className; ?><!--" >-->
-<!--            <img src="--><?php //echo $image; ?><!--" style="width:100px;height:100px;">-->
-<!--            <span class="aboutus-text">--><?php //echo $text; ?><!--</span>-->
-<!--            <span class="aboutus-author">--><?php //echo $author; ?><!--</span>-->
-<!--            <span class="aboutus-role">--><?php //echo $role; ?><!--</span>-->
-<!--        </blockquote>-->
-<!--        <div class="aboutus"  >-->
-<!---->
-<!--        </div>-->
-    <!--        <style type="text/css">
-            #<?php //echo $className; ?> {
-                background: <?php //echo $background_color; ?>;
-                color: <?php //echo $text_color; ?>;
-            }
-        </style>-->
-<!--    </div>-->
 
 <!--    5 last posts-->
 <div class="middle">
