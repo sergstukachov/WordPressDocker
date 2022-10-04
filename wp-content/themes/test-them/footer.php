@@ -6,8 +6,9 @@
 ?>
 <footer id="site-footer" class="header-footer-group">
 
-    <div><?php echo date('Y')  . '©' . __('My first them for WP'); ?></div>
-
+    <div><?= 'You can change it in the admin panel.' . get_field('footer_autor', 'option'); ?></div>
+  <?=   openweather_today() ?>
+	<?php wp_footer(); ?>
 </footer><!-- #site-footer -->
 
-<?php wp_footer(); ?>
+
